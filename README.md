@@ -80,3 +80,17 @@ For detailed API documentation, visit `http://127.0.0.1:8000/swagger/`.
 Run the tests using the following command:
 ```bash
 python manage.py test
+```
+
+## Deployment
+1. Set up a production environment with a web server and a WSGI server (e.g., Gunicorn).
+2. Configure the database and environment variables for production.
+3. Collect static files:
+    ```bash
+    python manage.py collectstatic
+    ```
+4. Apply migrations:
+    ```bash
+    python manage.py migrate
+    ```
+5. Start the application using your WSGI server.
